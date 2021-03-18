@@ -3,7 +3,6 @@ let note = 0
 
 console.log('bienvenue mousaillon dans le jeux de folie le plus folisant du monde')
 
-
 /*--------------------QUESTION 1-------------------------*/
 console.log('Question 1: Le C++ est un:\n1: langage\n2: compilateur')
 
