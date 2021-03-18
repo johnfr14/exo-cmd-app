@@ -1,19 +1,27 @@
 const readline = require('readline-sync')
 
-let mysterynumber = Number(readline.question('Maitre suprême veuillez spécifier un nombre entre 1 et 100 : '))
-while(mysterynumber < 1 || mysterynumber > 100 ) {
-  mysterynumber = Number(readline.question('NOPE ! spécifier un nombre entre 1 et 100 : '))
+/*---------------------------------PREMIER PARTIE------------------------------*/
+let mysterynumber = readline.question('Maitre suprême veuillez spécifier un nombre entre 1 et 100 : ')
+
+while(Number(mysterynumber) < 1 || Number(mysterynumber) > 100 && typeof mysterynumber === typeof 1) {
+  mysterynumber = readline.question('NOPE ! spécifier un nombre entre 1 et 100 : ')
 }
 
 for (let i = 0; i < 100; i++) {
   console.log('')
 }
 
-console.log('joueur 2 quelle ce mysterieu nombre ???????')
+/*---------------------------------DEUXIEME PARTIE------------------------------*/
+console.log('joueur 2 quelle ce mysterieux nombre ???????')
 
-notFound = true
+let notFound = true
 while (notFound) {
-  console.log(``)
+  let input = (readline.question(`Quelle est le number mystère ? : `))
+  
+  if (input === mysterynumber) {
+    console.log('\nFélicitation vous avez trouvé !!!!!')
+    notFound = false
+  } else {
+    console.log(input < mysterynumber ? 'Plus grand !' : 'Plus petit !' )
+  }
 }
-
-console.log(typeof mysteryWord)
