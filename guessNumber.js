@@ -17,7 +17,7 @@ console.log('joueur 2 quelle ce mysterieux nombre ???????')
 let notFound = true
 while (notFound) {
   let input = readline.question(`Quelle est le number mystère ? : `)
-  while(input >= 'a' && input <= 'z' || isNaN(Number(input))) { 
+  while(isNaN(Number(input))) { 
   input = readline.question('NOPE ! spécifier un nombre entre 1 et 100 : ')
   } 
   
